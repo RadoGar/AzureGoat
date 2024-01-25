@@ -233,7 +233,7 @@ resource "azurerm_storage_container" "storage_container_prod" {
 resource "azurerm_storage_container" "storage_container_dev" {
   name                  = "dev-appazgoat${random_id.randomId.dec}-storage-container"
   storage_account_name  = azurerm_storage_account.storage_account.name
-  container_access_type = "container"
+  container_access_type = "private"
 }
 
 resource "azurerm_storage_container" "storage_container_vm" {
