@@ -226,7 +226,7 @@ locals {
 resource "azurerm_storage_container" "storage_container_prod" {
   name                  = "prod-appazgoat${random_id.randomId.dec}-storage-container"
   storage_account_name  = azurerm_storage_account.storage_account.name
-  container_access_type = "blob"
+  container_access_type = "private"
 }
 
 
